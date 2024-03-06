@@ -1,24 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SecApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="349117678_644355900362601_6342343168978548917_n" translatesAutoresizingMaskIntoConstraints="NO" id="dX8-bO-yu9">
+                                <rect key="frame" x="20" y="64" width="374" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="p2s-Mp-10f"/>
+                                </constraints>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Harmonie Émeraude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PM5-ds-Xvq">
+                                <rect key="frame" x="20" y="242" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cUq-kd-cQ2">
+                                <rect key="frame" x="20" y="313" width="374" height="419"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <mutableString key="text">Dans cette captivante image de la nature, les rayons dorés du soleil matinal filtrent à travers la canopée dense de la forêt, créant un jeu de lumière qui danse sur les feuilles. En bas, une rivière tranquille serpente paisiblement, reflétant la végétation luxuriante qui l'entoure. Les nuances d'émeraude des arbres se marient avec les tons doux du ciel au lever du jour, instaurant une atmosphère où la tranquillité règne en maître. Une scène où chaque détail respire la quiétude, offrant un refuge de paix au cœur de la nature.</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7jw-37-vQZ">
+                                <rect key="frame" x="20" y="782" width="374" height="30"/>
+                                <state key="normal" title="Click Me!"/>
+                                <connections>
+                                    <action selector="btnClickMe:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vZQ-Bp-bk1"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cUq-kd-cQ2" firstAttribute="top" secondItem="PM5-ds-Xvq" secondAttribute="bottom" constant="50" id="04d-KJ-Rvc"/>
+                            <constraint firstItem="cUq-kd-cQ2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Cx8-4x-iFR"/>
+                            <constraint firstItem="7jw-37-vQZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="D8j-kb-NyM"/>
+                            <constraint firstItem="dX8-bO-yu9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="JwX-7w-BYP"/>
+                            <constraint firstItem="dX8-bO-yu9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Kws-wY-PWu"/>
+                            <constraint firstItem="PM5-ds-Xvq" firstAttribute="top" secondItem="dX8-bO-yu9" secondAttribute="bottom" constant="50" id="MXF-UH-Eae"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PM5-ds-Xvq" secondAttribute="trailing" constant="20" id="SKW-A9-Tw3"/>
+                            <constraint firstItem="PM5-ds-Xvq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="XKK-Np-Z0h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dX8-bO-yu9" secondAttribute="trailing" constant="20" id="eOL-U5-ZpS"/>
+                            <constraint firstItem="PM5-ds-Xvq" firstAttribute="top" secondItem="dX8-bO-yu9" secondAttribute="bottom" constant="50" id="hJi-DT-QQV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7jw-37-vQZ" secondAttribute="bottom" constant="50" id="mHb-kS-BFK"/>
+                            <constraint firstItem="7jw-37-vQZ" firstAttribute="top" secondItem="cUq-kd-cQ2" secondAttribute="bottom" constant="50" id="mfD-96-pBl"/>
+                            <constraint firstItem="cUq-kd-cQ2" firstAttribute="top" secondItem="PM5-ds-Xvq" secondAttribute="bottom" constant="50" id="w4q-5v-163"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7jw-37-vQZ" secondAttribute="trailing" constant="20" id="wYx-bS-GVg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cUq-kd-cQ2" secondAttribute="trailing" constant="20" id="xqs-Og-gqb"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="79.6875"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="349117678_644355900362601_6342343168978548917_n" width="626" height="358"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
